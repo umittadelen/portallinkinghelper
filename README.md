@@ -8,10 +8,10 @@ waypoints in Xaero's Minimap.
 ## Usage
 
 > [!NOTE]
-> Not implemented currently but `/locateportal [x y z]` works
+> Not implemented currently but `/locateportal <x y z>` works
 
 ```text
-/locateportal <name> [x y z]
+/locateportal <name> <x y z>
 ```
 
 ### Example:

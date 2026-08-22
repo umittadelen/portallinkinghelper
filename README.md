@@ -7,16 +7,23 @@ waypoints in Xaero's Minimap.
 
 ## Usage
 
-> [!NOTE]
-> Not implemented currently but `/locateportal <x y z>` works
-
 ```text
-/locateportal <name> <x y z>
+/locateportal add <name> [x y z]
+/locateportal remove <name>
 ```
 
-### Example:
+If coordinates are omitted, your current position is used. The
+command only works while standing in the Overworld or the Nether.
 
-`/locateportal basePortal` Creates a waypoint named: `P-basePortal` at the current position.
+### Examples:
+
+`/locateportal add basePortal` creates a waypoint named `P_basePortal` at your current position.
+
+`/locateportal add basePortal 100 64 200` creates a waypoint named `P_basePortal` at `100 64 200`.
+
+`/locateportal remove basePortal` removes the `P_basePortal` waypoints from both the Overworld and the Nether.
+
+If a waypoint with that name already exists, a number is appended (e.g. `P_basePortal_2`) to avoid overwriting it.
 
 ---
 

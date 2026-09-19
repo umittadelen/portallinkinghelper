@@ -1,48 +1,59 @@
-# Xaero's Portal Locater
+# Portal Linking Helper
 
-A client-side Fabric mod that creates linked Nether/Overworld
-waypoints in Xaero's Minimap.
+A client-side Minecraft mod that helps you find the matching Nether and Overworld coordinates for a portal.
 
----
+The mod can also create and remove waypoints through supported waypoint mods.
 
-## Usage
+## Features
+
+- Convert Overworld coordinates to Nether coordinates
+- Convert Nether coordinates to Overworld coordinates
+- Use your current position or enter coordinates manually
+- Create and remove portal waypoints when a supported waypoint mod is installed
+- Works without a waypoint mod
+
+## Commands
+
+With `Xaero's Minimap` mod:
 
 ```text
 /locateportal add <name> [x y z]
 /locateportal remove <name>
 ```
 
-If coordinates are omitted, your current position is used. The
-command only works while standing in the Overworld or the Nether.
+Without a supported mod:
 
-### Examples:
+```text
+/locateportal
+/locateportal [x y z]
+```
 
-`/locateportal add basePortal` creates a waypoint named `P_basePortal` at your current position.
+If coordinates are not given, your current position is used.
 
-`/locateportal add basePortal 100 64 200` creates a waypoint named `P_basePortal` at `100 64 200`.
+The command only works in the Overworld and Nether.
 
-`/locateportal remove basePortal` removes the `P_basePortal` waypoints from both the Overworld and the Nether.
+## Examples
 
-If a waypoint with that name already exists, a number is appended (e.g. `P_basePortal_2`) to avoid overwriting it.
-
----
+* `/locateportal add basePortal`:
+Creates a portal link using your current position.
+* `/locateportal add basePortal 100 64 200`:
+Creates a portal link at the coordinate `X100 Y64 Z200`.
+* `/locateportal remove basePortal`:
+Removes the portal link named `basePortal`.
 
 ## Requirements
-- Minecraft 1.21.1
-- Fabric
-- [Fabric API](https://modrinth.com/mod/fabric-api)
-- [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap)
-
----
+* [Fabric API](https://modrinth.com/mod/fabric-api)
 
 ## License
 
-MIT License. See LICENSE.
+MIT License. See [LICENSE](https://github.com/umittadelen/portallinkinghelper/blob/master/LICENSE).
 
----
+# Supported Waypoint Mods
 
-## Disclaimer
+## Xaero's Minimap
 
-This project is not affiliated with or endorsed by Xaero.
-Xaero's Minimap is a separate dependency and remains the property
-of its respective author.
+Xaero's Minimap is currently supported as an optional integration.
+You can use the coordinate commands without any other supported mod installed. If it is installed, their corresponding commands will be automatically added to runtime.
+
+> [!NOTE]
+> More waypoint integrations or features may/will be added in the future.

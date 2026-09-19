@@ -1,29 +1,28 @@
 {
 	"schemaVersion": 1,
-	"id": "xaerosportallocater",
+	"id": "portallinkinghelper",
 	"version": "${version}",
-	"name": "Xaero's Portal Locater",
-	"description": "Creates linked Xaero's Minimap waypoints for Nether portals.",
+	"name": "Portal Linking Helper",
+	"description": "A client-side mod for linking Nether and Overworld portal coordinates, with optional waypoint integration",
 	"authors": [
 		"umittadelen"
 	],
 	"contact": {
 		"homepage": "https://umittadelen.net/",
-		"sources": "https://github.com/umittadelen/xaerosportallocater"
+		"sources": "https://github.com/umittadelen/portallinkinghelper"
 	},
 	"license": "MIT",
-	"icon": "assets/xaerosportallocater/icon.png",
+	"icon": "assets/portallinkinghelper/icon.png",
 	"environment": "client",
 	"entrypoints": {
-		"client": [
-			"net.umittadelen.xaerosportallocater.XaerosPortalLocater"
+	"client": [
+		"net.umittadelen.portallinkinghelper.PortalLinkingHelper"
 		]
 	},
 	"depends": {
-		"fabricloader": ">=0.16.0",
+		"fabricloader": ">=0.15.11",
 		"minecraft": "~1.21.1",
 		"java": ">=21",
-		"xaerominimap": ">=26.4.2",
 		"fabric-api": "*"
 	}
 }
